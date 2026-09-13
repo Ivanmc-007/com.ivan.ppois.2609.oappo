@@ -114,7 +114,7 @@ public class BinaryTreeMap<K extends Comparable<K>, V> {
             // Копируем его данные
             current.key = successor.key;
             current.value = successor.value;
-            // Удаляем преемника из правого поддерева, теперь это безопасно!
+            // Удаляем преемника из правого поддерева
             current.right = removeItem(current.right, successor.key);
         }
         return current;
